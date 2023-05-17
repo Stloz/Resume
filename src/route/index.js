@@ -335,6 +335,7 @@ router.get('/person', function (req, res) {
                             email:
                               'alice.johnson@example.com',
                             skills: ['Java', 'Python', 'SQL'],
+                            
                             projects: [
                               {
                                 name: 'Project A',
