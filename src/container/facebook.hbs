@@ -8,40 +8,42 @@
     <h1>{{name}}</h1>
     <hr>
        
-    <ul>
-        {{#each users}}
+    {{#each users}}
 
-            <h2>Users:</h2>
-            <ul>
-                <li>id: {{id}}, Name: {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
+        <ol>
+            <li><h2>{{name}}</h2>id: {{id}}, ⚥ - {{gender}}, {{age}} years.</li>
+        </ol>
 
-                <ul>   
-                    <h2>Friends:</h2>
-                    {{#each friends}}
-                        <li>id: {{id}}, Name: {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
-                        
-                        <ul>
-                            <h3>Mutual friends:</h3>
-                            {{#each mutual_friends}}
-                                <li>id: {{id}}, Name: {{name}},  ⚥ - {{gender}}, {{age}} years.</li>
-                            {{/each}}
-                        </ul>
+        <ul>   
+            <h3>Friends:</h3>
+            {{#each friends}}
+                <li>id: {{id}}, {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
+                
+                <ul>
+                    <h3>Mutual friends:</h3>
+                    {{#each mutual_friends}}
+                        <li>id: {{id}}, {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
                     {{/each}}
+                </ul>
+            {{/each}}
+        </ul> 
 
-                    <h2>Groups:</h2>
-                    {{#each groups}}
-                        <li>id: {{id}}, Name: {{name}}, Descrption: {{description}}</li>
+        <ul>
+            <h3>Groups:</h3>
+            {{#each groups}}
+                <li>id: {{id}}, {{name}}</li>
+                <li>{{description}}</li>
 
-                        <h3>Members:</h3>
-                        {{#each members}}
-                            <li>id: {{id}}, Name: {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
-                        {{/each}}
+                <ul>
+                    <h3>Members:</h3>
+                    {{#each members}}
+                        <li>id: {{id}}, {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
                     {{/each}}
-                </ul> 
-            </ul>
-            <hr>
-        {{/each}}
-    </ul>
+                </ul>
+            {{/each}}
+        </ul>
+        <hr>
+    {{/each}}
 </div>
 
 {{!-- 
