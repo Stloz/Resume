@@ -7,6 +7,10 @@ body {
   background: #fff;
 }
 
+div {
+  margin: 15px;
+}
+
 main,
 header,
 footer,
