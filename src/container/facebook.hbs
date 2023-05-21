@@ -21,26 +21,54 @@
                 
                 <ul>
                     <h3>Mutual friends:</h3>
-                    {{#each mutual_friends}}
-                        <li>id: {{id}}, {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
-                    {{/each}}
+                        {{#each mutual_friends}}
+                            <li>id: {{id}}, {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
+                        {{#if mutual_friends}}
+                    <h4>Mutual friends:</h4>
+                        {{#each mutual_friends}}
+                            <li>id: {{id}}, {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
+                        {{/each}}
+                        {{/if}}
+                        {{/each}}
                 </ul>
             {{/each}}
+
+            <ul>
+            {{#if groups}}
+                <h3>Groups:</h3>
+                {{#each groups}}
+                    <li>id: {{id}}, {{name}}</li>
+                    <li>{{description}}</li>
+
+                    <ul>
+                        <h3>Members:</h3>
+                        {{#each members}}
+                            <li>id: {{id}}, {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
+                        {{/each}}
+                    </ul>
+                {{/each}}
+            {{/if}}
+        </ul>git 
+
+
+
         </ul> 
 
         <ul>
-            <h3>Groups:</h3>
-            {{#each groups}}
-                <li>id: {{id}}, {{name}}</li>
-                <li>{{description}}</li>
+            {{#if groups}}
+                <h3>Groups:</h3>
+                {{#each groups}}
+                    <li>id: {{id}}, {{name}}</li>
+                    <li>{{description}}</li>
 
-                <ul>
-                    <h3>Members:</h3>
-                    {{#each members}}
-                        <li>id: {{id}}, {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
-                    {{/each}}
-                </ul>
-            {{/each}}
+                    <ul>
+                        <h3>Members:</h3>
+                        {{#each members}}
+                            <li>id: {{id}}, {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
+                        {{/each}}
+                    </ul>
+                {{/each}}
+            {{/if}}
         </ul>
         <hr>
     {{/each}}
