@@ -5,6 +5,60 @@
             <li><h2>{{name}}</h2>{{id}}{{gender}}{{age}}</li>
             <hr>
             {{#each friends}}
+                <li>id: {{id}}, {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
+                
+                <ul>
+                    <h3>Mutual friends:</h3>
+                        {{#each mutual_friends}}
+                            <li>id: {{id}}, {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
+                        {{#if mutual_friends}}
+                    <h4>Mutual friends:</h4>
+                        {{#each mutual_friends}}
+                            <li>id: {{id}}, {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
+                        {{/each}}
+                        {{/if}}
+                        {{/each}}
+                </ul>
+            {{/each}}
+
+            <ul>
+            {{#if groups}}
+                <h3>Groups:</h3>
+                {{#each groups}}
+                    <li>id: {{id}}, {{name}}</li>
+                    <li>{{description}}</li>
+
+                    <ul>
+                        <h3>Members:</h3>
+                        {{#each members}}
+                            <li>id: {{id}}, {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
+                        {{/each}}
+                    </ul>
+                {{/each}}
+            {{/if}}
+        </ul>git 
+
+
+
+        </ul> 
+
+        <ul>
+            {{#if groups}}
+                <h3>Groups:</h3>
+                {{#each groups}}
+                    <li>id: {{id}}, {{name}}</li>
+                    <li>{{description}}</li>
+
+                    <ul>
+                        <h3>Members:</h3>
+                        {{#each members}}
+                            <li>id: {{id}}, {{name}}, ⚥ - {{gender}}, {{age}} years.</li>
+                        {{/each}}
+                    </ul>
+                {{/each}}
+            {{/if}}
+        </ul>
+        <hr>
                 {{id}}{{name}}{{gender}}{{age}}
                     {{#each mutual_friends}}
                         {{id}}{{name}}{{gender}}{{age}}
@@ -31,6 +85,6 @@
                         {{/each}}
                 {{/each}}
             {{/if}}
-        </ol>
+        </ol
     {{/each}}
 </main>
