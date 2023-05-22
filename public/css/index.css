@@ -1,14 +1,10 @@
 html {
-  max-width: 720px;
+  max-width: 1024px;
 }
 
 body {
   margin: 32px;
-  background: rgb(255, 254, 254);
-}
-
-div {
-  margin: 15px;
+  background: #fff;
 }
 
 main,
