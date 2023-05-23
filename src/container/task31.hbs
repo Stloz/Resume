@@ -356,8 +356,39 @@
         <br>
         <br>
         <hr>
+         {{#with footer}}
+            <h5>{{title}}</h5>
+            <div class="row">
 
-        {{#with footer}}
+                <div class="col-3 list-group">
+                    {{#each navigation}}
+                    <a href="{{href}}" class="list-item" target="_blank">
+                        <button class="btn btn-link">{{text}}</button>
+                    </a>
+                    <br>
+                    {{/each}}
+                </div>
+                
+                <div class="col-3 list-group">
+                    {{#each socialMedia}}
+                    <a href="{{link}}" class="list-item" target="_blank">
+                        <button class="btn-outline-dark">{{name}}</button>
+                    </a>
+                    <br>
+                    {{/each}}
+                </div>
+
+                <div class="col-3 list-group">
+                    {{#each partners}}
+                    <a href="{{link}}" class="list-item" target="_blank">
+                        <button class="btn btn-outline-info">{{name}}</button>
+                    </a>
+                    <br>
+                    {{/each}}
+                </div>
+            </div>
+        {{/with}}
+        {{!-- {{#with footer}}
             <div>
                 <h5>{{title}}</h5>
             </div>
@@ -386,7 +417,7 @@
                 </section>
             {{/each}}
 
-        {{/with}}
+        {{/with}} --}}
 
     </div>
 </main>
