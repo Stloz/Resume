@@ -1,0 +1,109 @@
+<main class="p-5">
+    <hr>
+    <div class="row">
+        <div class="nav">
+            {{#with navigation}}
+            {{#each links}}
+            <div class="nav-item">
+                <a href="{{href}}" class="nav-link {{#unless href includeZero=true}} disabled {{/unless}}"
+                    target="_blank">{{text}}</a>
+            </div>
+            {{/each}}
+            {{/with}}
+        </div>
+    </div>
+    <hr class="pb-2">
+
+    <div class="display-5 py-5">
+        <h1>{{header}}</h1>
+    </div>
+
+    <div class="row">
+
+        <div class="col-8">
+            {{#with contacts_data}}
+            <h2 class="pb-2">{{title}}</h2>
+            <div class="row"></div>
+            {{#each buttons}}
+            {{#if isPrimary}}<span class="btn btn-warning text-light mb-3">{{text}}</span>{{/if}}
+            {{#if isOutline}}<span class="btn btn-outline-warning mb-3 ms-3">{{text}}</span>{{/if}}
+            {{/each}}
+
+            {{#with form}}
+            <div class="row">
+                {{#with input}}
+                {{#with surname}}
+                <div class="col-6 py-2">
+                    <lable class="form-lable">{{label}}</lable>
+                    <input class="form-control" placeholder="{{placeholder}}">
+                    <div class="form-text">{{caption}}</div>
+                </div>
+                {{/with}}
+                {{#with name}}
+                <div class="col-6 py-2">
+                    <lable class="form-lable">{{label}}</lable>
+                    <input class="form-control" placeholder="{{placeholder}}">
+                    <div class="form-text">{{caption}}</div>
+                </div>
+                {{/with}}
+                {{#with phone}}
+                <div class="col-6 py-2">
+                    <lable class="form-lable">{{label}}</lable>
+                    <input class="form-control" placeholder="{{placeholder}}">
+                    <div class="form-text">{{caption}}</div>
+                </div>
+                {{/with}}
+                {{#with email}}
+                <div class="col-6 py-2">
+                    <lable class="form-lable">{{label}}</lable>
+                    <input class="form-control" placeholder="{{placeholder}}">
+                    <div class="form-text">{{caption}}</div>
+                </div>
+                {{/with}}
+                {{/with}}
+            </div>
+            {{/with}}
+            {{/with}}
+
+            <hr class="pb-2">
+
+            {{#each action_block}}
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-check form-switch">
+                        <label class="from-check-label">{{text}}</label>
+                        {{#if isSuccess}} active {{/if}}
+                        {{#if isDanger}} active {{/if}}
+                        {{#if isInfo}} active {{/if}}
+                        <input type="checkbox" class="form-check-input active">
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+
+            <hr class="pb-2">
+
+        </div>
+
+
+        <div class="col-4">
+            sdf
+        </div>
+    </div>
+
+    </div>
+
+    <hr class="py-2">
+
+    <div class="row">
+        {{#each footer}}
+        <div class="nav col-2">
+            {{#each this}}
+            <div>
+                <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{link}}">{{text}}</a>
+            </div>
+            {{/each}}
+        </div>
+        {{/each}}
+    </div>
+</main>
