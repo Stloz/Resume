@@ -80,8 +80,114 @@
 
         </div>
     </div>
+    <hr class="my-5">
+    {{!-- ИКОНКИ - https://icons.getbootstrap.com/====================== --}}
 
-    <hr>
+    <h1>Hello<i class="bi bi-emoji-kiss"></i></h1><i class="bi bi-apple"></i>
+    <i class="bi bi-emoji-kiss"></i>
+
+    <i class="fa-solid fa-hippo"></i>
+
+    <h1><i class="fa-solid fa-frog fa-bounce" style="color: #1acb1d;"></i>Frog</h1>
+
+    <svg width="30px" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+        <path
+            d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z" />
+    </svg>
+
+    <div>
+        <img src="/svg/user.svg">
+    </div>
+    <div>
+        <img width="100px" src="/images/helment.jpg">
+    </div>
+    {{!-- ФОРМЫ========================================================= --}}
+
+    <div class="row g-5">
+        <div class="col-12">
+            <lable class="form-lable">Email address</lable>
+            <input class="form-control">
+            <div class="form-text text-danger">Error. You need to set correct email</div>
+        </div>
+
+        <div class="col-12">
+
+            <div class="row">
+                <div class="col-2 ps-1">
+                    <lable class="form-lable">Email address</lable>
+                </div>
+                <div class="col-3">
+                    <input type="color" class="form-control form-control-lg">
+                </div>
+                <div class="col-3">
+                    <input class="form-control form-control-sm">
+                </div>
+                <div class="col-4 ps5 pt-1">
+                    <div class="form-text text-danger">Error. You need to set correct email</div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="col-12">
+            <lable class="form-lable">Select role</lable>
+            <select class="form-select form-select-lg">
+                <option selected>Open list</option>
+                <option value="1">Admin</option>
+                <option value="2">User</option>
+            </select>
+            <div class="form-text text-warning">You need to set correct role</div>
+        </div>
+        <hr>
+
+        <div class="col-12">
+            <div class="form-label">Select Laptop</div>
+            <div class="form-check">
+                <label class="from-check-label">Apple</label>
+                <input name="laptop" type="checkbox" class="form-check-input">
+            </div>
+
+            <div class="form-check">
+                <label class="from-check-label">HP</label>
+                <input name="laptop" type="checkbox" class="form-check-input">
+            </div>
+
+            <div class="form-check">
+                <label class="from-check-label">Dell</label>
+                <input name="laptop" type="checkbox" class="form-check-input">
+            </div>
+        </div>
+        <hr>
+
+        <div class="col-12>">
+            <div class="form-label">Select Laptop</div>
+            <div class="form-check">
+                <label class="from-check-label">Apple</label>
+                <input name="laptop" type="radio" class="form-check-input">
+            </div>
+
+            <div class="form-check">
+                <label class="from-check-label">HP</label>
+                <input name="laptop" type="radio" class="form-check-input">
+            </div>
+            <div class="form-check">
+                <label class="from-check-label">Dell</label>
+                <input name="laptop" type="radio" class="form-check-input">
+            </div>
+        </div>
+        <hr>
+
+        <div class="col-12">
+            <div class="form-check form-switch">
+                <label class="from-check-label">Get bonus</label>
+                <input name="laptop" type="checkbox" class="form-check-input">
+            </div>
+        </div>
+
+    </div>
+    <hr class="my-5">
+
     {{!-- ============================================================== --}}
 
     <div class="row">
