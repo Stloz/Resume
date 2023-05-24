@@ -1,0 +1,34 @@
+<div class="col-12">
+    {{#each goodsBlock}}
+    <div class="card m-3">
+        <div class="row">
+
+            <div class="col-2">
+                <img class="card-img-top m-2" src="{{image}}">
+            </div>
+
+            <div class="col-4">
+                <h5 class="m-1">{{name}}</h5>
+                <p class="mb-0">{{description}}</p>
+            </div>
+
+            <div class="col-2 my-4">
+                <p>{{price.title}}:</p>
+                <h5>{{price.value}}</h5>
+            </div>
+
+            <div class="col-2 my-5">
+                {{amount}}
+            </div>
+
+            <div class="col-2">
+                {{#each buttons}}
+                {{#if isPrimary}} <a class="btn btn-primary my-3" href="#" target="_blank">{{text}}</a>{{/if}}
+                {{#if isDanger}}<a class="btn btn-outline-danger my-2" href="#" target="_blank">{{text}}</a>{{/if}}
+                {{/each}}
+            </div>
+
+        </div>
+    </div>
+    {{/each}}
+</div>
