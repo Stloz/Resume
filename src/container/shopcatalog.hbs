@@ -74,8 +74,17 @@
                 <hr class="mx-2 {{#if @last}} disabled {{/if}}">
                 {{/with}}
 
-
-
+                {{#with price}}
+                <div class="form-label m-3">{{title}}</div>
+                {{#with range}}
+                <input class="form-control my-2" placeholder="{{from}}">
+                <input class="form-control my-2" placeholder="{{to}}">
+                {{/with}}
+                {{#with button}}
+                <a class="btn btn-outline-secondary col-3 m-2" href="{{link}}" target="_blank">{{text}}</a>
+                {{/with}}
+                <hr class="mx-2 {{#if @last}} disabled {{/if}}">
+                {{/with}}
 
                 {{#each filterList}}
                 <div class="form-label m-3">{{title}}</div>
