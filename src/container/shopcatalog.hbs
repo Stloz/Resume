@@ -1,0 +1,126 @@
+<main class="p-5">
+    <hr>
+    <div class="row">
+        <div class="nav">
+            {{#with navigation}}
+            {{#each links}}
+            <div class="nav-item">
+                <a href="{{href}}" class="nav-link {{#unless href includeZero=true}} disabled {{/unless}}"
+                    target="_blank">{{text}}</a>
+            </div>
+            {{/each}}
+            {{/with}}
+        </div>
+    </div>
+    <hr class="pb-2">
+
+    <div class="row">
+        <div class="col-12">
+            <ol class="breadcrumb">
+                {{#each breadcrumb}}
+                <li class="breadcrumb-item">
+                    <a href="{{url}}">{{name}}</a>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
+    </div>
+
+    <div class="display-4 my-4">
+        <h1>{{header}}</h1>
+    </div>
+
+    <div class="row">
+        {{#each sortBlock}}
+        <div class="col-3">
+            <select class="form-select form-select-sm">
+                <option selected>{{placeholder}}</option>
+                {{#each options}}
+                <option value="{{value}}">{{text}}</option>
+                {{/each}}
+            </select>
+        </div>
+        {{/each}}
+    </div>
+    {{!-- ---------------------------------------------------------------------------------- --}}
+    <div class="row mt-2">
+        <div class="col-4">
+            <div class="card">
+                {{#with filterBlock}}
+
+                {{#with sellers}}
+                <div class="form-label m-3">{{title}}</div>
+                {{#each list}}
+                <div class="form-check ms-5">
+                    <label class="from-check-label">{{value}}</label>
+                    <input name="filterList" type="checkbox" class="form-check-input">
+                </div>
+                {{/each}}
+                <hr class="mx-2 {{#if @last}} disabled {{/if}}">
+                {{/with}}
+
+
+                {{#with brands}}
+                <div class="form-label m-3">{{title}}</div>
+                {{#with input}}
+                <input class="form-control" placeholder="{{placeholder}}">
+                {{/with}}
+                {{#each options}}
+                <div class="form-check ms-5">
+                    <label class="from-check-label">{{value}}</label>
+                    <input name="filterList" type="checkbox" class="form-check-input">
+                </div>
+                {{/each}}
+                <hr class="mx-2 {{#if @last}} disabled {{/if}}">
+                {{/with}}
+
+
+
+
+                {{#each filterList}}
+                <div class="form-label m-3">{{title}}</div>
+                {{#each options}}
+                <div class="form-check ms-5">
+                    <label class="from-check-label">{{value}}</label>
+                    <input name="filterList" type="checkbox" class="form-check-input">
+                </div>
+                {{/each}}
+                <hr class="mx-2 {{#if @last}} disabled {{/if}}">
+                {{/each}}
+                {{/with}}
+            </div>
+        </div>
+        {{!-- ---------------------------------------------------------------------------------- --}}
+        <div class="col-8">
+            {{> catalogItem}}
+        </div>
+    </div>
+
+    <div class="card text-bg-success my-5">
+        {{#with service}}
+        <div class="card-body text-center">
+            <h2 class="card-title">{{title}}</h2>
+            <p>{{description}}</p>
+            {{#each buttons}}
+            <a class="btn btn-primary" href="{{link}}" target="_blank">{{text}}</a>
+            {{/each}}
+        </div>
+        {{/with}}
+    </div>
+
+
+    <hr class="py-2">
+
+    <div class="row">
+        {{#each footer}}
+        <div class="nav col-2">
+            {{#each this}}
+            <div>
+                <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{link}}">{{text}}</a>
+            </div>
+            {{/each}}
+        </div>
+        {{/each}}
+    </div>
+
+</main>
