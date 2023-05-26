@@ -1,68 +1,68 @@
-{{!-- 
-Це код container файлу для summary сторінки, 
+{{!--
+Це код container файлу для summary сторінки,
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+<div class="p-5">
 
     <h1>
         Excursion:
     </h1>
-    
+
     <ul>
         {{#with program}}
-            {{#with excursion}}
-                <h2>{{name}} - {{location.city}}, {{location.country}}.</h2>
-                <time>Date: {{date}}</time>
-                <hr>
+        {{#with excursion}}
+        <h2>{{name}} - {{location.city}}, {{location.country}}.</h2>
+        <time>Date: {{date}}</time>
+        <hr>
+
+        <ul>
+            {{#each program}}
+            <h3>
+                {{name}}, {{type}}, ({{duration}}) - days.
+            </h3>
+
+            <ul>
+                {{#with details}}
+
+                {{#with museum}}
+                <p><b>{{name}}</b>, {{location.address}}, {{location.city}}, {{location.city}}.</p>
 
                 <ul>
-                    {{#each program}}
-                        <h3>
-                            {{name}}, {{type}}, ({{duration}}) - days.
-                        </h3>
-
-                        <ul>
-                            {{#with details}}
-
-                                {{#with museum}}
-                                    <p><b>{{name}}</b>, {{location.address}}, {{location.city}}, {{location.city}}.</p>
-                                
-                                    <ul>
-                                        {{#each exhibits}}
-                                            <li><b>{{name}}</b>, {{#if artist}} {{artist}} {{else}} (Artist - unknown) {{/if}}, {{description}}, {{#if audio_guide}} Guide: 🇫🇷 {{/if}}</li>  
-                                        {{/each}}
-                                    </ul>
-                                {{/with}} 
-
-                                {{#with venue}}
-                                    <p><b>{{name}}</b>, {{location.address}}, {{location.city}}, {{location.city}}.</p>
-                                {{/with}} 
-
-                                <ol>
-                                    {{#each performers}}
-                                        <li><b>{{name}}</b> - {{type}}.</li>  
-                                    {{/each}}
-                                </ol>
-                                <br>
-
-                                {{#with guide}}
-                                    <b>Guide: {{name}}  ⭐ - {{rating}}</b>
-                                    <em>| language:{{language}}</em>
-                                {{/with}}
-                           
-                            {{/with}}
-                        </ul>
-                         <hr> 
+                    {{#each exhibits}}
+                    <li><b>{{name}}</b>, {{#if artist}} {{artist}} {{else}} (Artist - unknown) {{/if}}, {{description}},
+                        {{#if audio_guide}} Guide: 🇫🇷 {{/if}}</li>
                     {{/each}}
                 </ul>
-            {{/with}}   
+                {{/with}}
+
+                {{#with venue}}
+                <p><b>{{name}}</b>, {{location.address}}, {{location.city}}, {{location.city}}.</p>
+                {{/with}}
+
+                <ol>
+                    {{#each performers}}
+                    <li><b>{{name}}</b> - {{type}}.</li>
+                    {{/each}}
+                </ol>
+                <br>
+
+                {{#with guide}}
+                <b>Guide: {{name}} ⭐ - {{rating}}</b>
+                <em>| language:{{language}}</em>
+                {{/with}}
+
+                {{/with}}
+            </ul>
+            <hr>
+            {{/each}}
+        </ul>
+        {{/with}}
         {{/with}}
     </ul>
 </div>
 
-{{!-- 
-    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
-    Адже наш layout/default.hbs має вже структуру HTML
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
 --}}
-

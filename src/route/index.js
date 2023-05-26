@@ -214,7 +214,7 @@ router.get('/work', function (req, res) {
   res.render('work', {
     // ↙ сюди вводимо JSON дані
 
-    layout: 'big',
+    layout: 'basic',
 
     page: {
       title: 'Resume | Work',
@@ -1159,7 +1159,7 @@ router.get('/task21', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task21', {
-    layout: 'bootstrap',
+    layout: 'basic',
     heading: {
       main: {
         title: 'JavaScript',

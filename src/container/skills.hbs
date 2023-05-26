@@ -1,50 +1,50 @@
-{{!-- 
-Це код container файлу для summary сторінки, 
+{{!--
+Це код container файлу для summary сторінки,
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+<div class="p-5">
 	{{#with main}}
-		<main>
-			<section>
-				{{> title data="All skills" big=true }}
-				<ul>
-					{{#each skills}}
-						<li>
-							{{name}}
+	<main>
+		<section>
+			{{> title data="All skills" big=true }}
+			<ul>
+				{{#each skills}}
+				<li>
+					{{name}}
 
-							{{#if point includeZero=true}} ({{point}}) {{/if}}
-							{{#if isTop}} 👍 {{/if}}
+					{{#if point includeZero=true}} ({{point}}) {{/if}}
+					{{#if isTop}} 👍 {{/if}}
 
-							{{#unless point includeZero=true}} (Не вивчаємо) {{/unless}}
-							
-							{{#unless point}} 
-								{{#if point includeZero=true}}
-									(В процесі навчання)
-								{{/if}}
-							{{/unless}}
-						</li>
-					{{/each}}
-				</ul>
-			</section>
+					{{#unless point includeZero=true}} (Не вивчаємо) {{/unless}}
 
-			<section>
-				{{> title data="My hobbies" big=false }}
-				<ol>
-					{{#each hobbies}}
-						<li>
-							{{name}}
+					{{#unless point}}
+					{{#if point includeZero=true}}
+					(В процесі навчання)
+					{{/if}}
+					{{/unless}}
+				</li>
+				{{/each}}
+			</ul>
+		</section>
 
-							{{#if isMain}} (favourite) {{/if}}
-						</li>
-					{{/each}}
-				</ol>
-			</section>
-		</main>
-	{{/with}} 
+		<section>
+			{{> title data="My hobbies" big=false }}
+			<ol>
+				{{#each hobbies}}
+				<li>
+					{{name}}
+
+					{{#if isMain}} (favourite) {{/if}}
+				</li>
+				{{/each}}
+			</ol>
+		</section>
+	</main>
+	{{/with}}
 </div>
-  
-{{!-- 
-    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
-    Адже наш layout/default.hbs має вже структуру HTML
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
 --}}
