@@ -46,6 +46,10 @@ router.get('/', function (req, res) {
     layout: 'index',
 
     header,
+
+    page: {
+      title: 'Resume Project',
+    },
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
