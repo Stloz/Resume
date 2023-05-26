@@ -1,146 +1,146 @@
-{{!-- 
-Це код container файлу для summary сторінки, 
+{{!--
+Це код container файлу для summary сторінки,
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+<div class="p-5">
 
     <h1>{{name}}</h1>
     <p><em>{{description}}</em></p>
     <p>Price: {{price}} $</p>
     <p>Category: {{category}}</p>
     <hr>
-    
 
-       
+
+
     <ul>
         {{#with features}}
-            
-            <details open>
+
+        <details open>
+            <ul>
+                <h2>Processor:</h2>
+                {{#with processor}}
                 <ul>
-                    <h2>Processor:</h2>
-                    {{#with processor}}
-                        <ul>
-                            <li>Brand: {{brand}}</li>
-                            <li>Model: {{model}}</li>
-                            <li>Speed: {{speed}}</li>
-                            <li>Cores: {{cores}}</li>
-                            <li>Cache: {{cache}}</li>
-                        </ul>
-                        
-                    {{/with}}
-                    <hr>
-
-                    <h2>Memory:</h2>
-                    {{#with memory}}
-                        <ul>
-                            <li>Type: {{type}}</li>
-                            <li>Size: {{size}}</li>
-                            <li>Speed: {{speed}}</li>
-                        </ul>
-                        
-                    {{/with}}
-                    <hr>
-
-                    <h2>Storage:</h2>
-                    {{#with storage}}
-                        <ul>
-                            <li>Type: {{type}}</li>
-                            <li>Size: {{size}}</li>
-                        </ul>
-                        
-                    {{/with}}
-                    <hr>
-
-                    <h2>Display:</h2>
-                    {{#with display}}
-                        <ul>
-                            <li>size: {{size}}</li>
-                            <li>Resolution: {{resolution}}</li>
-                            <li>Technology: {{technology}}</li>
-                            <li>Color space: {{color_space}}</li>
-                            <li>Brightness: {{brightness}}</li>
-                            <li>Refresh rate: {{refresh_rate}}</li>
-                        </ul>
-                        
-                    {{/with}}
-                    <hr>
-
-                    <h2>Graphics:</h2>
-                    {{#with graphics}}
-                        <ul>
-                            <li>Brand: {{brand}}</li>
-                            <li>Model: {{model}}</li>
-                            <li>Memory: {{memory}}</li>
-                        </ul>
-                        
-                    {{/with}}
-                    <hr>
-
-                    <h2>Ports:</h2>
-                    {{#each ports}}
-                        <ul>
-                            <li>Type: {{type}}, Count: {{count}}</li>
-                            <ol>
-                                {{#each features}}
-                                    <li>{{this}}</li>
-                                {{/each}}
-                            </ol>
-                        </ul>
-                        <br>
-                        
-                    {{/each}}
-                    <hr>
-
-                    <h2>Battery:</h2>
-                    {{#with battery}}
-                        <ul>
-                            <li>Type: {{type}}</li>
-                            <li>Capacity: {{capacity}}</li>
-                            <li>Life: {{life}}</li>
-                        </ul>
-                        
-                    {{/with}}
-                    <hr>
-                    
-
-                    <h2>Weight:</h2>
-                        <ul>
-                            <li>{{weight}}</li>
-                        </ul>
-                    <hr>
-
-                    <h2>Dimensions:</h2>
-                    {{#with dimensions}}
-                        <ul>
-                            <li>Height: {{height}}</li>
-                            <li>Width: {{width}}</li>
-                            <li>Depth: {{depth}}</li>
-                        </ul>
-                        
-                    {{/with}}
-                    <hr>
-
-                    <h2>Operating system:</h2>
-                        <ul>
-                            <li>{{operating_system}}</li>
-                        </ul>
-                    <hr>
-
-                    <h2>Accessories:</h2>
-                    {{#each accessories}}
-                        <ul>
-                            <li>{{name}} - {{price}} $</li>
-                        </ul>  
-                    {{/each}}  
+                    <li>Brand: {{brand}}</li>
+                    <li>Model: {{model}}</li>
+                    <li>Speed: {{speed}}</li>
+                    <li>Cores: {{cores}}</li>
+                    <li>Cache: {{cache}}</li>
                 </ul>
-            </details>
+
+                {{/with}}
+                <hr>
+
+                <h2>Memory:</h2>
+                {{#with memory}}
+                <ul>
+                    <li>Type: {{type}}</li>
+                    <li>Size: {{size}}</li>
+                    <li>Speed: {{speed}}</li>
+                </ul>
+
+                {{/with}}
+                <hr>
+
+                <h2>Storage:</h2>
+                {{#with storage}}
+                <ul>
+                    <li>Type: {{type}}</li>
+                    <li>Size: {{size}}</li>
+                </ul>
+
+                {{/with}}
+                <hr>
+
+                <h2>Display:</h2>
+                {{#with display}}
+                <ul>
+                    <li>size: {{size}}</li>
+                    <li>Resolution: {{resolution}}</li>
+                    <li>Technology: {{technology}}</li>
+                    <li>Color space: {{color_space}}</li>
+                    <li>Brightness: {{brightness}}</li>
+                    <li>Refresh rate: {{refresh_rate}}</li>
+                </ul>
+
+                {{/with}}
+                <hr>
+
+                <h2>Graphics:</h2>
+                {{#with graphics}}
+                <ul>
+                    <li>Brand: {{brand}}</li>
+                    <li>Model: {{model}}</li>
+                    <li>Memory: {{memory}}</li>
+                </ul>
+
+                {{/with}}
+                <hr>
+
+                <h2>Ports:</h2>
+                {{#each ports}}
+                <ul>
+                    <li>Type: {{type}}, Count: {{count}}</li>
+                    <ol>
+                        {{#each features}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ol>
+                </ul>
+                <br>
+
+                {{/each}}
+                <hr>
+
+                <h2>Battery:</h2>
+                {{#with battery}}
+                <ul>
+                    <li>Type: {{type}}</li>
+                    <li>Capacity: {{capacity}}</li>
+                    <li>Life: {{life}}</li>
+                </ul>
+
+                {{/with}}
+                <hr>
+
+
+                <h2>Weight:</h2>
+                <ul>
+                    <li>{{weight}}</li>
+                </ul>
+                <hr>
+
+                <h2>Dimensions:</h2>
+                {{#with dimensions}}
+                <ul>
+                    <li>Height: {{height}}</li>
+                    <li>Width: {{width}}</li>
+                    <li>Depth: {{depth}}</li>
+                </ul>
+
+                {{/with}}
+                <hr>
+
+                <h2>Operating system:</h2>
+                <ul>
+                    <li>{{operating_system}}</li>
+                </ul>
+                <hr>
+
+                <h2>Accessories:</h2>
+                {{#each accessories}}
+                <ul>
+                    <li>{{name}} - {{price}} $</li>
+                </ul>
+                {{/each}}
+            </ul>
+        </details>
         {{/with}}
         <hr>
     </ul>
 </div>
 
-{{!-- 
-    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
-    Адже наш layout/default.hbs має вже структуру HTML
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
 --}}

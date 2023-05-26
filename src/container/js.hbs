@@ -1,9 +1,9 @@
-{{!-- 
-Це код container файлу для summary сторінки, 
+{{!--
+Це код container файлу для summary сторінки,
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+<div class="p-5">
     <h1 class="p-5">{{name}}</h1>
     <p><em>Description: {{description}}</em></p>
     <p>Founder: {{history.founder}}, {{history.year}}.</p>
@@ -13,56 +13,56 @@
         <h2>Types:</h2>
         <ul>
             {{#each types}}
-                <li>{{this}}</li>
+            <li>{{this}}</li>
             {{/each}}
         </ul>
     </ul>
     <hr>
 
-    
+
     <ul>
         <h2>Syntax:</h2>
         <ul>
             {{#with syntax}}
-                <b>Variables:</b>
-                <ul>
-                    {{#each variables}}
-                        <li>{{this}}</li>
-                    {{/each}}
-                </ul>
-                <hr>
+            <b>Variables:</b>
+            <ul>
+                {{#each variables}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <hr>
 
-                <b>Functions:</b>
-                <ul>
-                    {{#each functions}}
-                        <li>{{this}}</li>
-                    {{/each}}
-                </ul>
-                <hr>
+            <b>Functions:</b>
+            <ul>
+                {{#each functions}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <hr>
 
-                <b>Conditionals:</b>
-                <ul>
-                    {{#each conditionals}}
-                        <li>{{this}}</li>
-                    {{/each}}
-                </ul>
-                <hr>
+            <b>Conditionals:</b>
+            <ul>
+                {{#each conditionals}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <hr>
 
-                <b>Loops:</b>
-                <ul>
-                    {{#each loops}}
-                        <li>{{this}}</li>
-                    {{/each}}
-                </ul>
-                <hr>
+            <b>Loops:</b>
+            <ul>
+                {{#each loops}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <hr>
 
-                <b>Classes:</b>
-                <ul>
-                    {{#each classes}}
-                        <li>{{this}}</li>
-                    {{/each}}
-                </ul>
-                
+            <b>Classes:</b>
+            <ul>
+                {{#each classes}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+
             {{/with}}
         </ul>
     </ul>
@@ -72,7 +72,7 @@
         <h2>Features:</h2>
         <ul>
             {{#each features}}
-                <li>{{this}}</li>
+            <li>{{this}}</li>
             {{/each}}
         </ul>
     </ul>
@@ -82,7 +82,7 @@
         <h2>Libraries:</h2>
         <ul>
             {{#each libraries}}
-                <li>{{this}}</li>
+            <li>{{this}}</li>
             {{/each}}
         </ul>
     </ul>
@@ -92,17 +92,17 @@
         <h2>Tools:</h2>
         <ul>
             {{#each tools}}
-                <li>{{this}}</li>
+            <li>{{this}}</li>
             {{/each}}
         </ul>
     </ul>
     <hr>
 
-     <ul>
+    <ul>
         <h2>Community:</h2>
         <ul>
             {{#each community}}
-                <li>{{name}} - <i>{{type}}</i></li>
+            <li>{{name}} - <i>{{type}}</i></li>
             {{/each}}
         </ul>
     </ul>
@@ -110,7 +110,7 @@
 
 </div>
 
-{{!-- 
-    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
-    Адже наш layout/default.hbs має вже структуру HTML
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
 --}}

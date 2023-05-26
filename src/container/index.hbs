@@ -6,23 +6,27 @@
 <main class="p-5">
     <div class="row">
 
-        <div class="col-6">
+        <div class="col-5">
             <h1>
                 {{#with header}}
-                <p>{{name.firstname}} {{name.lastname}}</p>
+                <p class="mb-0 mt-4">{{name.firstname}} {{name.lastname}}</p>
                 {{/with}}
             </h1>
         </div>
 
-        <div class="col-6">
+        <div class="col-2">
+            <img src="/Images/SV.jpg" width="100px">
+        </div>
+
+        <div class="col-5">
             <h1>
                 {{#with header}}
-                <p class="text-end">{{name.title}}</p>
+                <p class="text-end mb-0 mt-4">{{name.title}}</p>
                 {{/with}}
             </h1>
         </div>
     </div>
-    <hr class="my-3">
+    <hr class="mb-3">
 
     <div class="row pt-3">
         <h2>Cписок сторінок</h2>
