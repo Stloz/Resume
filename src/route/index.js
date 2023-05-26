@@ -9,6 +9,7 @@ var header = {
   name: {
     firstname: 'Serhii',
     lastname: 'Vashchuk',
+    title: 'Resume project',
   },
   position: 'Junior Fullstack JS Developer',
   salary: '600$ в місяць',
@@ -41,7 +42,11 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+
+    header,
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
